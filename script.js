@@ -4,61 +4,75 @@ let list = [];
 let newButton = document.querySelector('.invertedButtonLook');
 let searchButton = document.querySelector('.buttonLook');
 let listTextDeco=[];
+let count = 0;
 
-// For rendering a list
-let addOneTask = (e,index) =>{
-    let eachItem = document.createElement('div');
-    eachItem.setAttribute("class","listItem");
-    eachItem.textContent = e;
-    listTask.appendChild(eachItem);
-    eachItem.addEventListener("click",()=>{
-        listTextDeco[index]==0?listTextDeco[index]=1:listTextDeco[index]=0;
-        addTask();
-    })
+const listData = {
+    description :"",
+    timeLeft :0,
+    textDeco:"none"
+
 }
-
-
-// This will re render the list menu
-let addTask = ()=>{
-    console.log(listTextDeco)
-    listTask.textContent = "";
-    list.forEach((e,index)=>{
-        let item = document.querySelector(".list:nth-child(1)");
-        console.log(item);
-        addOneTask(e,index);
-        
-    })
+const taskCompleted=(task)=>{
+   
 }
-
-
-// on click event for New Button
-newButton.addEventListener("click",()=>{
-    listTextDeco.push(0);
-    if((""+getData.value).length>=2){
-        list.push(getData.value.trim());
-        getData.value = "";
-        addTask();
-    }
-})
-
-
-// On click event for searching
-searchButton.addEventListener("click",()=>{
-    
-    let temp = 0;
-    listTask.textContent="";
-    list.forEach((val)=>{
-        if(val.includes(getData.value)){
-            temp++;
-            addOneTask(val);
+const addList=(listData)=>{
+    list.push(listData)
+    let listWrapper = document.createElement("div");
+    listWrapper.setAttribute("class","listWrapper");
+    listTask.appendChild(listWrapper);
+    let listItem = document.createElement("div");  
+    listItem.setAttribute("class","listItem");
+    listItem.setAttribute("id","node"+count);
+    listItem.textContent=listData;
+    listWrapper.appendChild(listItem);
+    let trash = document.createElement("i");
+    trash.setAttribute("class","fa-solid fa-trash");
+    trash.setAttribute("id","trash");
+    listWrapper.appendChild(trash);
+    console.log(trash);
+    listItem.addEventListener("click",()=>{
+        if(listItem.style.textDecoration!="line-through"){
+            listItem.style.textDecoration="line-through";
+        }else{
+            listItem.style.textDecoration="none";
         }
+    });
+    trash.addEventListener("click",()=>{
+        listWrapper.style.display="none";
     })
-    temp==0 || getData.value==="" ? document.getElementById("found").textContent="":document.getElementById("found").textContent=temp+" found";
-    if(list.length==0 || temp==0){
-        listTask.textContent="";
-        addOneTask("Not Found");
-    }
-    getData.textContent="";
+}
+
+
+// Adding data to list
+newButton.addEventListener("click",()=>{
+    list.push(getData.value);
+    console.log(list)
+    if((""+getData.value).length>1){
+        addList(getData.value);
+        getData.value = "";
+
+    }else{
+        getData.textContent="";
+        getData.setAttribute("placeholder","Description should be at least 2 character");
+    }  
 })
+
+searchButton.addEventListener("click",()=>{
+    if(getData.value!=""){
+        list.forEach((val, index)=>{
+            if(!val.includes(getData.value)){
+                document.querySelector("id","node"+index).style.display="none";
+            }
+        })
+    }else{
+        list.forEach((val, index)=>{
+            if(!val.includes(getData.value)){
+                document.querySelectorAll("id","node"+index).style.display="block";
+            }
+        })
+    }
+    
+})
+
 
 

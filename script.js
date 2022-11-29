@@ -22,7 +22,7 @@ const addList=(listData)=>{
     listTask.appendChild(listWrapper);
     let listItem = document.createElement("div");  
     listItem.setAttribute("class","listItem");
-    listItem.setAttribute("id","node"+count);
+    listItem.setAttribute("id","node"+count++);
     listItem.textContent=listData;
     listWrapper.appendChild(listItem);
     let trash = document.createElement("i");
@@ -38,7 +38,8 @@ const addList=(listData)=>{
         }
     });
     trash.addEventListener("click",()=>{
-        listWrapper.style.display="none";
+        listItem.style.display="none";
+        trash.style.display="none";
     })
 }
 
@@ -58,20 +59,21 @@ newButton.addEventListener("click",()=>{
 })
 
 searchButton.addEventListener("click",()=>{
-    if(getData.value!=""){
-        list.forEach((val, index)=>{
-            if(!val.includes(getData.value)){
-                document.querySelector("id","node"+index).style.display="none";
-            }
-        })
-    }else{
-        list.forEach((val, index)=>{
-            if(!val.includes(getData.value)){
-                document.querySelectorAll("id","node"+index).style.display="block";
-            }
-        })
-    }
-    
+    let listData = document.querySelectorAll(".listItem");
+    let listTemp = document.querySelectorAll(".listWrapper");
+    listData.forEach((val,index)=>{
+        // console.log(val.textContent+"".includes(getData.value));
+        console.log(`${val.textContent}  ${getData.value} ${val.textContent.includes(getData.value)}`)
+        if(val.textContent.includes(getData.value)){
+            console.log("Thisis true")
+            listTemp[index].style.display="flex";
+        }else{
+            console.log("This is false")
+            console.log(listTemp[index]);
+            listTemp[index].style.display="none";
+        }
+    })
+    getData.value = "";
 })
 
 

@@ -123,3 +123,98 @@ header{
     /* vertical-align: center; */
     height: 2em;
 }
+
+.dropdown{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* height:fit-content; */
+    /* left: 30vw; */
+    justify-content:center;
+    align-items: center;
+    background-color: var(--dark-color);
+    min-width: 40vw;
+    min-height: 40vh;
+    /* vertical-align: middle; */
+    /* border: 5px solid 50px var(--dark-color); */
+    box-shadow: 8px 8px 16px var(--mid-color);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+    border-radius: 10px;
+    /* overflow:hidden; */
+    /* display:none; */
+    
+}
+
+.timer{
+    position:relative;
+    top: 0.75em;
+    font-size: 1.8em;
+    gap: 1em;
+    margin: auto;
+    padding-bottom: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    /* height:2rem; */
+    justify-content: center;
+    align-items: center;
+}
+
+.defaultTimer{
+    margin-top:10px;
+    font-size: 1em;
+    gap: 1em;
+    position:relative;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    height:2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.defaultTimerCircle{
+    display: flex;
+    /* outline: var(--dark-color) solid 4px; */
+    justify-content: center;
+    align-items: center;
+    border-color:black;
+    background-color: skyblue;
+    border-radius: 50%;
+    border-width: 50px;
+    width: 5rem;
+    height: 5rem;
+    /* border-radius: 50%; */
+}
+
+.invertedSubmitBtn{
+    font-size: 20px;
+    color:var(--light-color);
+    background-color: var(--dark-color);
+    border: 5px solid var(--light-color);
+    width: 200px;
+    height:50px;
+    border-radius: 50px;
+    cursor:pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.timerName{
+    margin-top: 10px;
+    display:flex;
+    justify-content: center;
+    font-size: 20px;
+    color:var(--dark-color);
+    font-weight: bolder;
+    
+}

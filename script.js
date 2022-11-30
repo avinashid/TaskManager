@@ -45,6 +45,7 @@ const addList=(listData)=>{
 
 
 // Adding data to list
+
 newButton.addEventListener("click",()=>{
     list.push(getData.value);
     console.log(list)
@@ -62,8 +63,6 @@ searchButton.addEventListener("click",()=>{
     let listData = document.querySelectorAll(".listItem");
     let listTemp = document.querySelectorAll(".listWrapper");
     listData.forEach((val,index)=>{
-        // console.log(val.textContent+"".includes(getData.value));
-        console.log(`${val.textContent}  ${getData.value} ${val.textContent.includes(getData.value)}`)
         if(val.textContent.includes(getData.value)){
             console.log("Thisis true")
             listTemp[index].style.display="flex";

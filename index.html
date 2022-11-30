@@ -13,9 +13,41 @@
             <em>Task Manager</em>
     </header>
     <div id="search">
-            <input type="text" class = "inputField">
-            <button class="buttonLook">Search</button>
-            <button class="invertedButtonLook">NEW</button>
+        <input type="text" class = "inputField" autofocus>
+        <button class="buttonLook" >Search</button>
+        <button class="invertedButtonLook">NEW</button>
+    </div>
+    <div class="dropdown">
+        <div class="timerName">ADD TIMER</div>
+        <div class="timer">
+            <div class="timerWrapper">
+                
+                <div class="incrementBtn fa-solid fa-arrow-up"></div>
+                <div id="hh">00</div>
+                <div class="decrementBtn fa-solid fa-arrow-down"></div>
+            </div>
+            <div class="timerWrapper">:</div>
+            <div class="timerWrapper">
+                <div class="incrementBtn fa-solid fa-arrow-up" ></div>
+                <div id="hh">00</div>
+                <div class="decrementBtn fa-solid fa-arrow-down"></div>
+            </div>
+            <div class="timerWrapper">:</div>
+            <div class="timerWrapper">
+                <div class="incrementBtn fa-solid fa-arrow-up"></div>
+                <div id="hh">00</div>
+                <div class="decrementBtn fa-solid fa-arrow-down"></div>
+            </div>
+        </div>
+        <div class="defaultTimer">
+            <div class="defaultTimerCircle" id="tenTimer">00:10:00</div>
+            <div class="defaultTimerCircle" id="thirtyTimer">00:30:00</div>
+            <div class="defaultTimerCircle" id="fourtyfiveTimer">00:45:00</div>
+            <div class="defaultTimerCircle" id="noneTimer">N/A</div>
+        </div>
+        <div class="addTaskBtn">
+            <div type="text" class="invertedSubmitBtn">ADD TASK</div>
+        </div>
     </div>
     <div class="banner">
         <span id="description">Description</span>

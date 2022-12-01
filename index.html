@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <header>
-            <em>Task Manager</em>
-    </header>
-    <div id="search">
-        <input type="text" class = "inputField" autofocus>
-        <button class="buttonLook" >Search</button>
-        <button class="invertedButtonLook">NEW</button>
-    </div>
-    <div class="dropdown">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <em>Task Manager</em>
+      </header>
+      <div id="search">
+        <input type="text" class="inputField" autofocus />
+        <button class="button buttonLook">Search</button>
+        <button class="button invertedButtonLook">NEW</button>
+      </div>
+      <div class="dropdown">
         <div class="timerName">ADD TIMER</div>
         <div class="timer">
-            <div class="timerWrapper">
-                
-                <div class="incrementBtn fa-solid fa-arrow-up"></div>
-                <div id="hh">00</div>
-                <div class="decrementBtn fa-solid fa-arrow-down"></div>
-            </div>
-            <div class="timerWrapper">:</div>
-            <div class="timerWrapper">
-                <div class="incrementBtn fa-solid fa-arrow-up" ></div>
-                <div id="hh">00</div>
-                <div class="decrementBtn fa-solid fa-arrow-down"></div>
-            </div>
-            <div class="timerWrapper">:</div>
-            <div class="timerWrapper">
-                <div class="incrementBtn fa-solid fa-arrow-up"></div>
-                <div id="hh">00</div>
-                <div class="decrementBtn fa-solid fa-arrow-down"></div>
-            </div>
+          <div class="timerWrapper">
+            <div class="incrementBtn fa-solid fa-arrow-up"></div>
+            <div id="hh">00</div>
+            <div class="decrementBtn fa-solid fa-arrow-down"></div>
+          </div>
+          <div class="timerWrapper">:</div>
+          <div class="timerWrapper">
+            <div class="incrementBtn fa-solid fa-arrow-up"></div>
+            <div id="hh">00</div>
+            <div class="decrementBtn fa-solid fa-arrow-down"></div>
+          </div>
+          <div class="timerWrapper">:</div>
+          <div class="timerWrapper">
+            <div class="incrementBtn fa-solid fa-arrow-up"></div>
+            <div id="hh">00</div>
+            <div class="decrementBtn fa-solid fa-arrow-down"></div>
+          </div>
         </div>
         <div class="defaultTimer">
-            <div class="defaultTimerCircle" id="tenTimer">00:10:00</div>
-            <div class="defaultTimerCircle" id="thirtyTimer">00:30:00</div>
-            <div class="defaultTimerCircle" id="fourtyfiveTimer">00:45:00</div>
-            <div class="defaultTimerCircle" id="noneTimer">N/A</div>
+          <div class="defaultTimerCircle" id="tenTimer">00:10:00</div>
+          <div class="defaultTimerCircle" id="thirtyTimer">00:30:00</div>
+          <div class="defaultTimerCircle" id="fourtyfiveTimer">00:45:00</div>
+          <div class="defaultTimerCircle" id="noneTimer">N/A</div>
         </div>
         <div class="addTaskBtn">
-            <div type="text" class="invertedSubmitBtn">ADD TASK</div>
+          <div type="text" class="invertedSubmitBtn">ADD TASK</div>
         </div>
-    </div>
-    <div class="banner">
+      </div>
+      <div class="banner">
         <span id="description">Description</span>
         <span id="timeLeft">TimeLeft</span>
-        
-    </div>
-    <div id="found" style="margin-top: 10px; text-align: center;"></div>
-    <div class="list">
-        <!-- <div class="listWrapper"><div class="listItem"></div><i class="fa-solid fa-trash" id ="trash"></i></div> -->
+      </div>
+      <div id="found" style="margin-top: 10px; text-align: center"></div>
+      <div class="list">
+        <!-- <div class="listWrapper">
+            <div class="listItem"></div>
+            <i class="fa-solid fa-trash" id ="trash"></i>
+        </div>
+      </div> -->
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

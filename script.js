@@ -1,10 +1,13 @@
 let listTask = document.querySelector(".list");
 let getData = document.querySelector(".inputField");
+// let hh = document.querySelector("")
 let list = [];
 let newButton = document.querySelector('.invertedButtonLook');
 let searchButton = document.querySelector('.buttonLook');
 let listTextDeco=[];
 let count = 0;
+let timeLeftSec = 0;
+const timerEvent = document.querySelector(".dropdown");
 
 const listData = {
     description :"",
@@ -47,6 +50,7 @@ const addList=(listData)=>{
 // Adding data to list
 
 newButton.addEventListener("click",()=>{
+    timerEvent.style.display="flex";
     list.push(getData.value);
     console.log(list)
     if((""+getData.value).length>1){
@@ -75,5 +79,19 @@ searchButton.addEventListener("click",()=>{
     getData.value = "";
 })
 
+
+// For dropdown
+
+// adding increment and decrement functionality
+
+const increDecreVal=(val, id )=>{
+    if(val==1){
+        // if(id.addEventListener)
+    }
+}
+
+document.querySelector(".invertedSubmitBtn").addEventListener("click",()=>{
+    timerEvent.style.display="none";
+})
 
 

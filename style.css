@@ -151,7 +151,7 @@ header{
     align-items: center;
     background-color: aqua;
     min-width: 72vw;
-    min-height: 40vh;
+    min-height: fit-content;
     box-shadow: 8px 8px 16px var(--mid-color);
     border-radius: 10px;
     display:none;
